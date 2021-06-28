@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MyApp()
-  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -13,19 +11,25 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Container(
-            height: 100.0,
-            width: 100.0,
-            margin: EdgeInsets.fromLTRB(20.0, 50.0, 30.0, 10.0),
-            padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-            color: Colors.white,
-            child: Text('Hello'),
+          child: Column(
+            children: [
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/tombraider.png'),
+              ),
+              Text(
+                'Lara Croft',
+                style: TextStyle(
+                    fontSize: 40.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
+              ),
+            ],
           ),
         ),
       ),
     );
   }
 }
-
